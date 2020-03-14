@@ -125,11 +125,11 @@ class InstagramBot:
 
 
 if __name__ == '__main__':
-    username = 'noabalas'
-    password = 'noainstegramtest'
+    username = '******'
+    password = '******'
     follow_order = "Follow"  # TODO: Enum
     ig_bot = InstagramBot(username, password)
-    ig_bot.follow_action('adihimelbloy', follow_order)
+    ig_bot.follow_action('nakash_itay', follow_order)
     hashtag = 'newyork'
     url_hashtag_text = hashtag.format("/explore/tags/", hashtag)
     ig_bot.nav_page(url_hashtag_text)
