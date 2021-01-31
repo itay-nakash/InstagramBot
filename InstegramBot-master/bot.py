@@ -48,15 +48,16 @@ class InstagramBot:
     def scroll_down(self):
         body_elem = self.driver.find_element_by_tag_name('body')
 
-        # move up and down 3 times to load new images
+        # move up and down 3 times to load more images
         for _ in range(3):
             body_elem.send_keys(Keys.END)
-            time.sleep(1)  # TODO change the sleep to a better function
+            time.sleep(1)  # TODO change the sleep to a better function, to avoid bot detection
             body_elem.send_keys(Keys.HOME)
             time.sleep(1)
 
     """
     function that activate the navigation function to the user page and follow/Unfollow him
+    user - the user you want to make the action at.
     follow_order - the text according to the act you want to do. Follow for following a user and Following for unfollow
     """
 
@@ -83,6 +84,7 @@ class InstagramBot:
         link_to_heart.click()
 
     """""
+    -----Not working----
     function that get to the comment button, click it and insert a spesific string that its get
     the function simulates slow typing
     """""
@@ -91,7 +93,7 @@ class InstagramBot:
     def write_comment(self, comment_text):
         try:
             comment_button = self.driver.find_element_by_link_text('Comment')
-            comment_button.click()  # TODO resarch lambidia
+            comment_button.click() 
         except NoSuchElementException:
             pass
         try:
@@ -127,7 +129,7 @@ class InstagramBot:
 if __name__ == '__main__':
     username = '******'
     password = '******'
-    follow_order = "Follow"  # TODO: Enum
+    follow_order = "Follow" 
     ig_bot = InstagramBot(username, password)
     ig_bot.follow_action('nakash_itay', follow_order)
     hashtag = 'newyork'
