@@ -4,6 +4,7 @@ Pyhton based Instegram bot for managing accounts on Instegram.
 
 This is not a fully function bot, just some basic function for basic operations.
 The functions I implement:
+
 *Login (when given a spesific user name and password)
 
 *search other users (by user name, or scroll in a spesifc HashTag)
