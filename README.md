@@ -1,4 +1,4 @@
-# InstegramBot
+# InstagramBot
 Basic project I did to learn how to work with Python and Selenium libarary.
 Pyhton based Instegram bot for managing accounts on Instegram.
 
